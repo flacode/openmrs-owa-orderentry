@@ -32,15 +32,10 @@ export class SearchAndAddOrder extends React.Component {
   render() {
     return (
       <div>
-        <Tabs careSetting={this.handleCareSettings}>
+        <Tabs getActiveTab={this.handleCareSettings}>
           <Tab
             tabName="OutPatient">
-            <form className="sized-inputs css-form" noValidate>
-              <p className="input-position-class">
-                <label name="input-id">Input label</label>
-                <input id="input-id" />
-              </p>
-            </form>
+            <AddForm />
           </Tab>
           <Tab tabName="InPatient">Tab 2 content</Tab>
         </Tabs>

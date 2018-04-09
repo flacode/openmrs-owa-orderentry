@@ -8,7 +8,9 @@ class OrderEntryPage extends React.Component {
     return (
       <div>
         <PatientDashboard {...this.props} />
-        <SearchAndAddOrder />
+        <div className="drug-orders">
+          <SearchAndAddOrder />
+        </div>
       </div>
     );
   }
