@@ -10,7 +10,7 @@ class Tabs extends Component {
       this.setState({
         activeTabIndex: tabIndex,
       });
-      this.props.careSetting(tabName);
+      this.props.getActiveTab(tabName);
     }
 
     passPropsToChildren = () => (
@@ -44,6 +44,7 @@ class Tabs extends Component {
 Tabs.propTypes = {
   defaultActiveTabIndex: PropTypes.number,
   children: PropTypes.node.isRequired,
+  getActiveTab: PropTypes.func.isRequired,
 };
 
 Tabs.defaultProps = {

@@ -33,13 +33,15 @@ export class SearchAndAddOrder extends React.Component {
   render() {
     return (
       <div className="body-wrapper">
-        <Tabs careSetting={this.handleCareSettings}>
+        <Tabs getActiveTab={this.handleCareSettings}>
           <Tab
             tabName="Outpatient">
             <SearchDrug />
+            <AddForm />
           </Tab>
           <Tab tabName="Inpatient">
             <SearchDrug />
+            <AddForm />
           </Tab>
         </Tabs>
       </div>

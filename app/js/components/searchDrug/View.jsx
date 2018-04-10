@@ -18,20 +18,18 @@ const View = ({
   const showError = () => (error ? error.data.message : '');
 
   return (
-    <form id="new-order" className="sized-inputs css-form">
-      <p>
-        <span>
-          <label>New order for: </label>
-          <input
-            list="drugs" type="text" id="sel-drug4841input"
-            placeholder="Search for drug...(3 chars min.)" size="40"
-            onChange={event => searchDrug(event.target.value)}
-          />
-          <span>{showLoading()}</span>
-          <span className="preformatted-note">{showError()}</span>
-          {renderResults()}
-        </span>
-      </p>
+    <form id="new-order">
+      <span>
+        <label>New order for: </label>
+        <input
+          list="drugs" type="text" id="sel-drug4841input"
+          placeholder="Search for drug...(3 chars min.)" size="40"
+          onChange={event => searchDrug(event.target.value)}
+        />
+        <span>{showLoading()}</span>
+        <span className="preformatted-note">{showError()}</span>
+        {renderResults()}
+      </span>
     </form>
   );
 };
